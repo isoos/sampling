@@ -1,0 +1,15 @@
+name: sampling
+description: |
+  Various algorithms for selection of a subset (a statistical sample) of individuals from within
+  a statistical population to estimate characteristics of the whole population.
+version: 1.0.0
+homepage: https://github.com/isoos/sampling
+author: Istvan Soos <istvan.soos@gmail.com>
+
+environment:
+  sdk: '>=2.0.0-dev.1.0 <2.0.0'
+
+#dependencies:
+
+dev_dependencies:
+  test: ^0.12.30
