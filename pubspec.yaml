@@ -2,7 +2,7 @@ name: sampling
 description: |
   Various algorithms for selection of a subset (a statistical sample) of individuals from within
   a statistical population to estimate characteristics of the whole population.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/isoos/sampling
 author: Istvan Soos <istvan.soos@gmail.com>
 
