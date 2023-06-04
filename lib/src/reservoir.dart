@@ -10,9 +10,9 @@ class ReservoirSampler<T> extends SamplerBase<T> {
   final Random _random;
   int _totalCount = 0;
 
-  ReservoirSampler(int limit, {Random random})
+  ReservoirSampler(int limit, {Random? random})
       : _limit = limit,
-        _random = random ?? new Random();
+        _random = random ?? Random.secure();
 
   @override
   void add(T item) {

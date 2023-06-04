@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Updated to null-safety and Dart-3 compatibility.
+
 ## 1.0.2
 
 - Updated `README.md`

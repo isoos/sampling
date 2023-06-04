@@ -5,7 +5,7 @@ import 'package:sampling/src/sampler.dart';
 /// Keeps the latest N items in the sample.
 class LatestSampler<T> extends SamplerBase<T> {
   final int _limit;
-  final Queue<T> _items = new Queue();
+  final Queue<T> _items = Queue();
 
   LatestSampler(int limit) : _limit = limit;
 

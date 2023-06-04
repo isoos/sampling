@@ -23,26 +23,26 @@ class SamplerBase<T> implements Sampler<T> {
 
   @override
   void addAll(Iterable<T> items) {
-    items?.forEach(add);
+    items.forEach(add);
   }
 }
 
 class ComparableSampler<T extends Comparable> extends SamplerBase<T> {
-  T _min;
-  T _max;
+  T? _min;
+  T? _max;
 
-  T get min => _min;
-  T get max => _max;
+  T get min => _min == null ? throw StateError('No items were added.') : _min!;
+  T get max => _max == null ? throw StateError('No items were added.') : _max!;
 
   @override
   void add(T item) {
     super.add(item);
     _min ??= item;
     _max ??= item;
-    if (_min.compareTo(item) > 0) {
+    if (_min!.compareTo(item) > 0) {
       _min = item;
     }
-    if (_max.compareTo(item) < 0) {
+    if (_max!.compareTo(item) < 0) {
       _max = item;
     }
   }
@@ -68,6 +68,8 @@ class CompositeSampler<T> extends SamplerBase<T> {
   @override
   void add(T item) {
     super.add(item);
-    _samplers.forEach((s) => s.add(item));
+    for (final s in _samplers) {
+      s.add(item);
+    }
   }
 }
