@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Updated lints and pubspec.
+
 ## 1.1.0
 
 - Updated to null-safety and Dart-3 compatibility.
